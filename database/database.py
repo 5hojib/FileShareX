@@ -25,11 +25,7 @@ async def add_user(user_id: int):
 
 async def full_userbase():
     user_docs = user_data.find()
-    user_ids = []
-    for doc in user_docs:
-        user_ids.append(doc['_id'])
-        
-    return user_ids
+    return [doc['_id'] for doc in user_docs]
 
 async def del_user(user_id: int):
     user_data.delete_one({'_id': user_id})
