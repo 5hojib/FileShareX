@@ -55,7 +55,7 @@ class Bot(Client):
             sys.exit()
 
         self.set_parse_mode(ParseMode.HTML)
-        self.LOGGER(__name__).info(f"Bot Running..!")
+        self.LOGGER(__name__).info("Bot Running..!")
         self.username = usr_bot_me.username
         #web-response
         app = web.AppRunner(await web_server())
